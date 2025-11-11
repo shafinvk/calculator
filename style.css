@@ -1,0 +1,137 @@
+/* --- Base layout --- */
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: hsl(0, 0%, 95%);
+}
+
+#calculator {
+  font-family: Arial, sans-serif;
+  background-color: hsl(0, 0%, 15%);
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Display --- */
+#display {
+  padding: 20px;
+  width: 100%;
+  font-size: 3em;
+  text-align: right;
+  border: none;
+  background-color: hsl(0, 0%, 20%);
+  color: white;
+  border-radius: 10px 10px 0 0;
+  box-sizing: border-box;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* --- Buttons grid --- */
+#keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+/* --- Buttons --- */
+button {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: none;
+  background-color: hsl(0, 0%, 30%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background-color: hsl(0, 0%, 40%);
+}
+
+button:active {
+  background-color: hsl(0, 0%, 50%);
+  transform: scale(0.95);
+}
+
+/* --- Operator buttons --- */
+.operator {
+  background-color: hsl(35, 100%, 55%);
+}
+
+.operator:hover {
+  background-color: hsl(35, 100%, 65%);
+}
+
+.operator:active {
+  background-color: hsl(35, 100%, 75%);
+}
+
+/* --- Backspace button --- */
+.backspace {
+  background-color: hsl(0, 100%, 45%);
+}
+
+.backspace:hover {
+  background-color: hsl(0, 100%, 55%);
+}
+
+.backspace:active {
+  background-color: hsl(0, 100%, 65%);
+}
+
+/* --- Responsive styles --- */
+
+/* Tablets and small laptops */
+@media (max-width: 768px) {
+  #display {
+    font-size: 2.5em;
+  }
+  button {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  #calculator {
+    width: 95%;
+    max-width: 320px;
+  }
+
+  #display {
+    font-size: 2em;
+    padding: 15px;
+  }
+
+  #keys {
+    gap: 8px;
+    padding: 15px;
+  }
+
+  button {
+    font-size: 1.5rem;
+    border-radius: 20px;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+  #display {
+    font-size: 1.8em;
+  }
+  button {
+    font-size: 1.3rem;
+  }
+}
