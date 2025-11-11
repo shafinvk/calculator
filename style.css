@@ -15,16 +15,15 @@ body {
   width: 90%;
   max-width: 400px;
   overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 /* --- Display --- */
 #display {
-  padding: 20px;
+  padding: 25px;
   width: 100%;
-  font-size: 3em;
+  font-size: 60px;
   text-align: right;
-  border: none;
+  border: 15px solid hsl(0, 0%, 15%); /* <-- Add this line */
   background-color: hsl(0, 0%, 20%);
   color: white;
   border-radius: 10px 10px 0 0;
